@@ -4,9 +4,8 @@ import (
 	"errors"
 	_ "log"
 
-	"github.com/macduyhai/grpcApi/tree/main/server/models"
-
 	"github.com/jinzhu/gorm"
+	"github.com/macduyhai/grpcApi/server/models"
 )
 
 type UserDao interface {

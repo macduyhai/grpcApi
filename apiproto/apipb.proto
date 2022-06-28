@@ -2,19 +2,22 @@ syntax = "proto3";
 
 package api;
 
+import "google/protobuf/timestamp.proto";
+
 option go_package="apiproto";
 
 message Addrequest {
     string username = 1;
     string password = 2;
     string fullname = 3;
-    int32 old =4;
+    int64 salary =4;
+    google.protobuf.Timestamp insert_at = 5;
 }
 message AddResponse {
     int32 code = 1;
     string message = 2; 
 }
 
-service AddService {
+service UserService {
     rpc Add(Addrequest) returns(AddResponse);
 }
