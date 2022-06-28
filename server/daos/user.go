@@ -4,7 +4,7 @@ import (
 	"errors"
 	_ "log"
 
-	"github.com/macduyhai/grpcApi/models"
+	"github.com/macduyhai/grpcApi/tree/main/server/models"
 
 	"github.com/jinzhu/gorm"
 )
