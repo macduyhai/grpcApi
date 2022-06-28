@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package api;
+
+option go_package="apiproto";
+
+message Addrequest {
+    string username = 1;
+    string password = 2;
+    string fullname = 3;
+    int32 old =4;
+}
+message AddResponse {
+    int32 code = 1;
+    string message = 2; 
+}
+
+service AddService {
+    rpc Add(Addrequest) returns(AddResponse);
+}
